@@ -1,0 +1,16 @@
+{
+  "name": "pgexplode",
+  "version": "0.0.0",
+  "description": "Explode DATABASE_URL into its constituent PG* variables",
+  "bin": "index.js",
+  "author": "Seth Fitzsimmons <seth@mojodna.net>",
+  "license": "ISC",
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stamen/pgexplode.git"
+  },
+  "dependencies": {
+    "pg-connection-string": "^0.1.2"
+  }
+}
