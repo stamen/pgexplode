@@ -1,6 +1,6 @@
 {
   "name": "pgexplode",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Explode DATABASE_URL into its constituent PG* variables",
   "bin": "index.js",
   "author": "Seth Fitzsimmons <seth@mojodna.net>",
