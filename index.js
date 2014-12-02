@@ -6,10 +6,16 @@ var url = require("url");
 
 var parse = require("pg-connection-string").parse;
 
+var PG_PROTOCOLS = [
+  "postgres:",
+  "postgis:",
+  "postgresql:"
+];
+
 if (process.env.DATABASE_URL) {
   var uri = url.parse(process.env.DATABASE_URL);
 
-  if (uri.protocol === "postgres:") {
+  if (PG_PROTOCOLS.indexOf(uri.protocol) >= 0) {
     var cfg = parse(process.env.DATABASE_URL),
         env = {};
 
