@@ -23,7 +23,7 @@ if (process.env.DATABASE_URL) {
     env.PGPORT = cfg.port;
     env.PGDATABASE = cfg.database;
     env.PGUSER = cfg.user;
-    env.PGPASSWORD = cfg.password;
+    env.PGPASSWORD = cfg.password.replace("$", "\\$");
 
     env.PGSSLMODE = cfg.ssl ? "require" : "";
     env.PGAPPNAME = cfg.application_name;
