@@ -23,7 +23,7 @@ if (process.env.DATABASE_URL) {
     env.PGPORT = cfg.port;
     env.PGDATABASE = cfg.database;
     env.PGUSER = cfg.user;
-    env.PGPASSWORD = cfg.password.replace("$", "\\$");
+    env.PGPASSWORD = cfg.password;
 
     env.PGSSLMODE = cfg.ssl ? "require" : "";
     env.PGAPPNAME = cfg.application_name;
@@ -37,7 +37,7 @@ if (process.env.DATABASE_URL) {
         return !!env[k];
       })
       .forEach(function(k) {
-        console.log("%s=%s", k, env[k]);
+        console.log("%s='%s'", k, env[k]);
       });
   }
 }
