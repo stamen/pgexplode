@@ -22,7 +22,7 @@ if (process.env.DATABASE_URL) {
     env.PGHOST = cfg.host;
     env.PGPORT = cfg.port;
     env.PGDATABASE = cfg.database;
-    env.PGUSER = cfg.user;
+    env.PGUSER = encodeURIComponent(cfg.user);
     env.PGPASSWORD = cfg.password;
 
     env.PGSSLMODE = cfg.ssl ? "require" : "";
